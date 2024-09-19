@@ -34,10 +34,10 @@
      </div>
     <!-- Login Page -->
     <main class="">
-      <div class="hidden">
+      <div class="">
       <div id="loginPage" class="flex justify-center mt-5">
-        <div class="mockup-phone">
-          <div class="camera"></div>
+        
+          
 
           <div class="display">
             <div class="artboard artboard-demo phone-3">
@@ -94,18 +94,19 @@
               </div>
             </div>
           </div>
-        </div>
+        
       </div>
     </div>
       <!-- Login Page End -->
 
       <!-- Display Page -->
-      <div id="servicePage" class="">
+      <div id="servicePage" class="hidden">
         <div class="flex justify-center my-5">
-          <div class="mockup-phone">
-            <div class="camera"></div>
+          
+            
             <div class="display">
-              <div class="artboard artboard-demo phone-3">
+              <div class="artboard artboard-demo phone-3 flex items-start justify-start">
+                <div class="content-start">
                 <!-- nav -->
                 <nav class="w-full mt-3">
                   <div class="flex justify-between">
@@ -207,8 +208,8 @@
                     </div>
                     <div
                       class="border-2 flex items-center border-gray-400 bg-white rounded-md m-2"
-                    > <h1 class="text-2xl"><i class="fa-solid fa-hand-holding-dollar text-green-600"></i></h1><div><h1 class="font-bold text-xl ml-2">Bank Deposit</h1>
-                      <p class="ml-2">Today 01:40 AM</p></div>
+                    > <h1 class="text-2xl"><i class="fa-solid fa-hand-holding-dollar text-green-600"></i></h1><div><h1 class="font-bold text-xl ml-2">Cashout: <strong id="lastCashout"> </strong></h1>
+                      <p id="lastCashoutTime" class="ml-2">Today 01:40 AM</p></div>
                       
                     </div>
                     <div
@@ -268,13 +269,13 @@
                             <div class="w-full mx-2 mt-2">
                             <label for="">Agent Number</label>
                               
-                              <input  type="tel" placeholder="Enter 11 digit number" class="input input-bordered w-full my-2" />
+                              <input id="cashoutAccountNumber" type="tel" placeholder="Enter 11 digit number" class="input input-bordered w-full my-2" />
 
                               
-                              <input type="tel" placeholder="Enter amount to withdraw" class="input input-bordered w-full" />
+                              <input id="cashotAmount" type="tel" placeholder="Enter amount to withdraw" class="input input-bordered w-full" />
                               
-                              <input type="tel" placeholder="Enter 4 digit pin number" class="input input-bordered w-full my-2" />
-                              <div class="flex justify-center"><button class="btn  bg-blue-600 w-60 mx-auto rounded-lg">Withdraw Money</button></div>
+                              <input id="cashoutPinNumber" type="tel" placeholder="Enter 4 digit pin number" class="input input-bordered w-full my-2" />
+                              <div class="flex justify-center"><button id="cashoutBtn" class="btn  bg-blue-600 w-60 mx-auto rounded-lg">Withdraw Money</button></div>
                             </div>
                            </div>
                     </div>
@@ -357,8 +358,9 @@
             </div>
             </div>
           </div>
+          </div>
         </div>
-      </div>
+      
     </main>
     <script src="app.js"></script>
   </body>

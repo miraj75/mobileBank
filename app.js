@@ -130,6 +130,51 @@ cancelCashoutMoney.addEventListener('click',function(){
 })
 
 
+
+
+//CashOut Function
+
+document.getElementById('cashoutBtn').addEventListener('click', function(event){
+    event.preventDefault();
+
+    const accountNumber = document.getElementById('cashoutAccountNumber').value;
+      const cashotAmount = document.getElementById('cashotAmount').value;
+      const pinNumber = document.getElementById('cashoutPinNumber').value;
+      const totalAmount = parseFloat(document.getElementById('totalAmount').textContent);
+
+      if(!accountNumber  || accountNumber.length !== 11){
+        alert('Add A Proper 11 Digit Account Number')
+        return;
+      }
+      if(!cashotAmount){
+        alert('Add Proper Withdrawl Ammount')
+        return;
+      }
+      if(totalAmount - cashotAmount < 0){
+        alert('You Dont Have This amount of Money')
+        return;
+      }
+      if(!pinNumber || pinNumber.length !== 4){
+        alert('Add A Proper 4 Digit Pin Number')
+        return;
+      }
+
+      
+      const newTotal = totalAmount - parseFloat(cashotAmount);
+      document.getElementById('totalAmount').textContent = newTotal.toFixed(2);
+
+
+      document.getElementById('lastCashout').innerText = '$'+ newTotal ;
+
+
+      const currentDate = new Date();
+      const formattedDate = currentDate.toLocaleString();
+      document.getElementById('lastCashoutTime').innerText = formattedDate;
+
+
+})
+
+
 //Transfer Section
 
 
