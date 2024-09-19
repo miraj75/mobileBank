@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/9d064cba9d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Payoo-MFFS</title>
+  </head>
+  <body>
+    <!-- PopUp -->
+     <div  class="hidden">
+      <div class="flex justify-center items-center min-h-screen">
+        <div class="card bg-base-100 w-96 shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title">Card title!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div class="card-actions justify-end">
+              <button class="btn btn-warning">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+     </div>
+    <!-- Login Page -->
+    <main class="">
+      <div class="hidden">
+      <div id="loginPage" class="flex justify-center mt-5">
+        <div class="mockup-phone">
+          <div class="camera"></div>
+
+          <div class="display">
+            <div class="artboard artboard-demo phone-3">
+              <div class="hero">
+                <div class="hero-content flex-col">
+                  <h1 class="text-4xl font-extrabold text-blue-500">MFFS</h1>
+                  <div
+                    class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+                  >
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Mobile Number</span>
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          class="input input-bordered"
+                          placeholder="Enter your number"
+                          required
+                        />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">4-Digit-Pin</span>
+                        </label>
+                        <input
+                          type="password"
+                          id="pin"
+                          placeholder="Enter 4 Digit Pin"
+                          class="input input-bordered"
+                          pattern="[0-9]{4}"
+                          maxlength="4"
+                          required
+                        />
+                        <label class="label">
+                          <a
+                            href="#"
+                            id="forgetPass"
+                            class="label-text-alt link link-hover"
+                            >Forgot password?</a
+                          >
+                        </label>
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="loginbtn" class="btn btn-primary">
+                          Login
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- Login Page End -->
+
+      <!-- Display Page -->
+      <div id="servicePage" class="">
+        <div class="flex justify-center my-5">
+          <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+              <div class="artboard artboard-demo phone-3">
+                <!-- nav -->
+                <nav class="w-full mt-3">
+                  <div class="flex justify-between">
+                    <div class="flex">
+                      <div class="ml-2 mx-0 my-auto text-blue-600">
+                        <h1 class="font-extrabold text-4xl">
+                          <i class="fa-solid fa-money-check-dollar"></i>
+                        </h1>
+                      </div>
+                      <div class="ml-2">
+                        <h1 class="font-extrabold text-xl">
+                          $<span id="totalAmount">45000 </span>
+                        </h1>
+                        <p class="from-green-800">Available Balance</p>
+                      </div>
+                    </div>
+                    <div class="mr-2 mx-0 my-auto bg-red-400 px-2 rounded-sm">
+                      <button id="logoutBtn" class="font-bold">Logout</button>
+                    </div>
+                  </div>
+                </nav>
+                <!-- All Services  -->
+                <div>
+                  <!-- greetings -->
+                  <div class="mt-2 ml-2">
+                    <h1 class="font-extrabold mb-2 text-xl">
+                      🔥 Welcome to Payooo!
+                    </h1>
+                    <p>
+                      Enjoy easy and convenient financial services with us.
+                      Cashout charge is low and
+                    </p>
+                  </div>
+                  <!-- Service Cards -->
+                  <div>
+                    <div
+                      class="grid grid-cols-3 mx-2 gap-1 my-2 font-extrabold cursor-pointer"
+                    >
+                      <div  id="addMoney" class="border-amber-400 border-2 p-4 text-center">
+                        <h1 class="text-2xl">
+                          <i class="fa-solid fa-sack-dollar text-green-600"></i>
+                        </h1>
+                        <p>Add Money</p>
+                      </div>
+                      <div id="cashout" class="border-amber-400 border-2 p-4 text-center">
+                        <h1 class="text-2xl">
+                          <i
+                            class="fa-solid fa-money-bill-trend-up text-red-400"
+                          ></i>
+                        </h1>
+                        <p>Cashout</p>
+                      </div>
+                      <div id="transfer" class="border-amber-400 border-2 p-4 text-center">
+                        <h1 class="text-2xl">
+                          <i
+                            class="fa-solid fa-money-bill-transfer text-blue-400"
+                          ></i>
+                        </h1>
+                        <p>Transfer Money</p>
+                      </div>
+                    </div>
+                    <div
+                      class="grid grid-cols-3 mx-2 gap-1 my-2 font-extrabold cursor-pointer"
+                    >
+                      <div id="getBonus" class="border-amber-400 border-2 p-4 text-center">
+                        <h1 class="text-2xl">
+                          <i
+                            class="fa-solid fa-circle-dollar-to-slot text-green-500"
+                          ></i>
+                        </h1>
+                        <p>Get Bonus</p>
+                      </div>
+                      <div id="payBill" class="border-amber-400 border-2 p-4 text-center"
+                        >
+                        <h1 class="text-2xl">
+                            <i class="fa-solid fa-file-invoice-dollar text-blue-700"></i>
+                        </h1><p>Pay Bill</p></div
+                      >
+                      <div id="transection" class="border-amber-400 border-2 p-4 text-center"
+                        >
+                        <h1 class="text-2xl"><i class="fa-solid fa-filter-circle-dollar text-green-600"></i></h1><p>Transactions</p>
+                    </div>
+                    <!-- latest Payment -->
+                  </div>
+                  <!-- Latest Payment Section -->
+                  <div id="latestSection" class="">
+                  <div class="flex justify-between mx-2">
+                    <h1 class="font-bold">Latest Payment :</h1>
+                    <p class="cursor-pointer"></p>
+                  </div>
+                  <!-- transection -->
+                  <div>
+                    <div
+                      class="border-2 flex items-center border-gray-400 bg-white rounded-md m-2"
+                    > <h1 class="text-2xl"><i class="fa-solid fa-hand-holding-dollar text-green-600"></i></h1>
+                    <div><h1 class="font-bold text-xl ml-2">You Deposited: <strong id="lastDeposit"></strong></h1>
+                      <p id="lastDepositTime" class="ml-2">Today 01:36 AM</p></div>
+                      
+                    </div>
+                    <div
+                      class="border-2 flex items-center border-gray-400 bg-white rounded-md m-2"
+                    > <h1 class="text-2xl"><i class="fa-solid fa-hand-holding-dollar text-green-600"></i></h1><div><h1 class="font-bold text-xl ml-2">Bank Deposit</h1>
+                      <p class="ml-2">Today 01:40 AM</p></div>
+                      
+                    </div>
+                    <div
+                      class="border-2 flex items-center border-gray-400 bg-white rounded-md m-2"
+                    ><h1 class="text-2xl"><i class="fa-solid fa-hand-holding-dollar text-green-600"></i></h1> <div><h1 class="font-bold text-xl ml-2">Mobile Recharge</h1>
+                      <p class="ml-2">Today 01:44 AM</p></div>
+                      
+                    </div>
+                    <div
+                      class="border-2 flex items-center border-gray-400 bg-white rounded-md m-2"
+                    ><h1 class="text-2xl"><i class="fa-solid fa-hand-holding-dollar text-green-600"></i></h1> <div><h1 class="font-bold text-xl ml-2">Gas Bill</h1>
+                      <p class="ml-2">Today 01:48 AM</p></div>
+                      
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- Add Money Section -->
+                 <div class="hidden" id="addMoneySection">
+                    <div>
+                        <div class="flex justify-between mx-2 items-center">
+                            <h1 class="font-extrabold text-2xl">Add Money :</h1>
+                            <p class="cursor-pointer" id="cancelAddMoney">Cancel</p>
+                          </div>
+                          <!-- Form Section -->
+                           <div class="flex justify-center">
+                            <div class="w-full mx-2 mt-2">
+                            <select id="bankSelect" class="select select-bordered w-full ">
+                              <option disabled selected>Select A Bank</option>
+                              <option value="Agrani Bank">Agrani Bank</option>
+                              <option value="NRBC Bank">NRBC Bank</option>
+                              <option value="City Bank">City Bank</option>
+                              <option value="Eastern Bank">Eastern Bank</option>
+                              </select>
+                              
+                              <input id="accountNumber"  type="tel" placeholder="Enter 11 digit account number" class="input input-bordered w-full my-2" />
+
+                              
+                              <input id="depositAmount" type="tel" placeholder="Add Amount to Deposit" class="input input-bordered w-full" />
+                              
+                              <input id="pinNumber" type="tel" placeholder="Enter 4 digit pin number" class="input input-bordered w-full my-2" />
+                              <div class="flex justify-center"><button id="addMoneyBtn" class="btn  bg-blue-600 w-60 mx-auto rounded-lg">Add Money</button></div>
+                            </div>
+                           </div>
+                    </div>
+                 </div>
+                 <!-- Cash Out Section -->
+                 <div class="hidden" id="cashoutMoneySection">
+                    <div>
+                        <div class="flex justify-between mx-2 items-center">
+                            <h1 class="font-extrabold text-2xl">Cash Out :</h1>
+                            <p class="cursor-pointer" id="cancelCashoutMoney">Cancel</p>
+                          </div>
+                          <!-- Form Section -->
+                           <div class="flex justify-center">
+                            <div class="w-full mx-2 mt-2">
+                            <label for="">Agent Number</label>
+                              
+                              <input  type="tel" placeholder="Enter 11 digit number" class="input input-bordered w-full my-2" />
+
+                              
+                              <input type="tel" placeholder="Enter amount to withdraw" class="input input-bordered w-full" />
+                              
+                              <input type="tel" placeholder="Enter 4 digit pin number" class="input input-bordered w-full my-2" />
+                              <div class="flex justify-center"><button class="btn  bg-blue-600 w-60 mx-auto rounded-lg">Withdraw Money</button></div>
+                            </div>
+                           </div>
+                    </div>
+                 </div>
+
+                 <!-- Transfer Money Section -->
+                 <div  class="hidden" id="transferMoneySection">
+                  <div>
+                      <div class="flex justify-between mx-2 items-center">
+                          <h1 class="font-extrabold text-2xl">Transfer Money :</h1>
+                          <p class="cursor-pointer" id="cancelTransferMoney">Cancel</p>
+                        </div>
+                        <!-- Form Section -->
+                         <div class="flex justify-center">
+                          <div class="w-full mx-2 mt-2">
+                          <label for="">User Account Number</label>
+                            
+                            <input  type="tel" placeholder="Enter 11 digit number" class="input input-bordered w-full my-2" />
+
+                            
+                            <input type="tel" placeholder="Enter amount to withdraw" class="input input-bordered w-full" />
+                            
+                            <input type="tel" placeholder="Enter 4 digit pin number" class="input input-bordered w-full my-2" />
+                            <div class="flex justify-center"><button class="btn  bg-blue-600 w-60 mx-auto rounded-lg">Send Now</button></div>
+                          </div>
+                         </div>
+                  </div>
+               </div>
+               <!-- Get bonus Section -->
+               <div  class="hidden" id="GetBonusSection">
+                <div>
+                    <div class="flex justify-between mx-2 items-center">
+                        <h1 class="font-extrabold text-2xl">Get Bonus :</h1>
+                        <p class="cursor-pointer" id="cancelGetBonus">Cancel</p>
+                      </div>
+                      <!-- Form Section -->
+                       <div class="flex justify-center">
+                        <div class="w-full mx-2 mt-2">
+                        <label for="">Enter Bonus Coupon</label>
+                          
+                          <input  type="tel" placeholder="Enter Your Coupon" class="input input-bordered w-full my-2" />
+                          <div class="flex justify-center"><button class="btn  bg-blue-600 w-60 mx-auto rounded-lg">Send Now</button></div>
+                        </div>
+                       </div>
+                </div>
+             </div>
+
+             <!-- Pay Bill Section -->
+
+             <div  class="hidden" id="payBillSection">
+              <div>
+                  <div class="flex justify-between mx-2 items-center">
+                      <h1 class="font-extrabold text-2xl">Pay Bill :</h1>
+                      <p class="cursor-pointer" id="cancelpayBill">Cancel</p>
+                    </div>
+                    <!-- Form Section -->
+                     <div class="flex justify-center">
+                      <div class="w-full mx-2 mt-2">
+                      <label for="">User Account Number</label>
+                        
+                      <select class="select select-bordered w-full ">
+                        <option disabled selected>Select To Pay</option>
+                        <option>Electricity Bill</option>
+                        <option>Gas Bill</option>
+                        <option>Wifi Bill</option>
+                        <option>Water Bill</option>
+                      </select>
+
+                        
+                        <input type="tel" placeholder="Enter account number" class="input input-bordered w-full my-2" />
+                        <input type="tel" placeholder="Add Amount to pay" class="input input-bordered w-full" />
+                        
+                        <input type="tel" placeholder="Enter 4 digit pin number" class="input input-bordered w-full my-2" />
+                        <div class="flex justify-center"><button class="btn  bg-blue-600 w-60 mx-auto rounded-lg">Send Now</button></div>
+                      </div>
+                     </div>
+              </div>
+           </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
